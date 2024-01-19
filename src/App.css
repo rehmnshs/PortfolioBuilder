@@ -161,11 +161,13 @@ cursor: pointer;
 }
 
 .btfulls > a > button{
+  background-color: rgb(168 85 247);
   border-radius: 50px;
   width: 5vw;
   height: 5vh;
   z-index: 101;
   font-size: 0.80vw;
+  color: white;
 }
 .simgo:hover .overlay  {
   opacity: 1;
@@ -240,7 +242,10 @@ left: 85%;
   border-radius: 3px;
 }
 
-
+.bt1{
+  background-color: rgb(168 85 247);
+border: black 1px solid;
+}
 .dropdown{
 position: absolute;
   height: 0px;

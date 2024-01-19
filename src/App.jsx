@@ -8,6 +8,7 @@ import pic3 from "../src/assets/p3.png";
 import pic4 from "../src/assets/p4.png";
 import { useNavigate } from "react-router-dom";
 import { googleLogout } from '@react-oauth/google';
+import {decode as base64_decode, encode as base64_encode} from 'base-64';
 
 import "./App.css";
 
@@ -74,6 +75,8 @@ function App() {
   useEffect(() => {
     setuid(getCookie("yourCookieName"));
     console.log(uid);
+    console.log(encodeURIComponent(base64_encode(uid)));
+
 
 
   }, []);
@@ -85,7 +88,7 @@ function App() {
         <div className="header">
           <div className="headerContents">
             <img src={logo} />
-            {uid && <div onClick={()=>{navigate('/dashboard')}}>{}</div>}
+            {uid && <div onClick={()=>{navigate('/dashboard')}}>Dashboard</div>}
           </div>{" "}
           {!uid && (
             <div className="authOptions">
@@ -101,6 +104,7 @@ function App() {
               <button
                 type="button"
                 class="btn btn-primary"
+                
                 id="signup"
                 onClick={() => {
                   navigate("/signup");
@@ -158,7 +162,7 @@ function App() {
                 <a
                   href={
                     uid
-                      ? `https://mohan-test-15-portfolio-2.onrender.com/?id=${uid.uid}`
+                      ? `https://mohan-test-15-portfolio-2.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`
 
                       : "http://localhost:5173/login"
                   }
@@ -190,7 +194,7 @@ function App() {
                 <a
                   href={
                     uid
-                      ? `https://jayanth-kpv-portfolio-1.onrender.com/?id=${uid.uid}`
+                      ? `https://jayanth-kpv-portfolio-1.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`
                       : "http://localhost:5173/login"
                   }
                   target="_blank"
@@ -221,7 +225,7 @@ function App() {
                 <a
                   href={
                     uid
-                      ? `https://mohan-test-15-portfolio-2.onrender.com/?id=${uid.uid}`
+                      ? `https://mohan-test-15-portfolio-2.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`
 
                       : "http://localhost:5173/login"
                   }
@@ -253,7 +257,7 @@ function App() {
                 <a
                   href={
                     uid
-                      ? `https://templateportfolio.onrender.com/?id=${uid.uid}`
+                      ? `https://templateportfolio.onrender.com/?id=${base64_encode(uid)}`
 
                       : "http://localhost:5173/login"
                   }

@@ -10,8 +10,9 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import axios from "axios";
 
 function Dashboard1({userID}) {
+
   const [searchValue, setSearchValue] = useState("");
-  const sites = [
+  var sites = [
     {
       SiteName: "mohan",
       Template: "Developer-1",
@@ -101,7 +102,8 @@ function Dashboard1({userID}) {
     })
     .then(() => {
       console.log("User data fetched")
-      //const sites = res
+      const sites = res
+    
     })
     .catch((e) => {
       console.log("error fetching user data")
