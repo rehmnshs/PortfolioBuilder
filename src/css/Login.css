@@ -1,0 +1,61 @@
+.loginboxAL {
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+  .emailA::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 350px;
+    background-color: grey;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0.5;
+  }
+  .B {
+    width: 300px;
+  }
+  .B > div {
+    position: relative;
+    height: 5vh;
+    width: 350px;
+    background: blueviolet;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  .B > div::before {
+    content: "";
+    position: absolute;
+    height: 90%;
+    width: 15%;
+    margin-left: 2px;
+    background-color: white;
+    background: white url("../assets/Google__G__logo.svg") center center no-repeat;
+    background-size: contain; /* or contain, depending on your preference */
+    padding: 0px;
+    border-radius: 3px;
+  }
+  
+  .B > div::after {
+    content: "Continue with google";
+  
+    color: white;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+.gbt1{
+
+
+}
