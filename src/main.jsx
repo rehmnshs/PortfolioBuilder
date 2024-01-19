@@ -4,8 +4,7 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import SignUpPage from './Pages/SignUpPage.jsx';
-import Dashboard from './Pages/Dashboard.jsx';
-import Dashboard1 from './Pages/Dashboard1.jsx';
+
 
 
 const router = createBrowserRouter([
@@ -18,10 +17,7 @@ const router = createBrowserRouter([
     element: <SignUpPage />,
   },
 
-  {
-    path: "/dashboard",
-    element: <Dashboard1 />,
-  }
+
 ]);
 
 const el = document.getElementById("root");
