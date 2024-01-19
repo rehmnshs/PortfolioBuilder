@@ -10,7 +10,6 @@ import { useNavigate } from "react-router-dom";
 import { googleLogout } from '@react-oauth/google';
 
 import "./App.css";
-import Logoutbutton from "./Components/Logoutbutton";
 
 
 function App() {
@@ -41,10 +40,7 @@ function App() {
 
   function deleteAllCookies(cookieName) {
     googleLogout();
-    const googleLogoutElement = document.querySelector(".glogout");
-    if (googleLogoutElement) {
-      googleLogoutElement.click();
-    }
+
     const cookies = document.cookie.split("; ");
 
     for (const cookie of cookies) {

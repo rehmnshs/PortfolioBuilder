@@ -36,9 +36,7 @@ export default function LoginButton() {
     <>
     <GoogleOAuthProvider clientId={clientId}>
 
-    <div className='B' onClick={handleBClick}>
-        <div className='bb'></div>
-      </div>
+
       <GoogleLogin
        className="one"
         clientId={clientId}
