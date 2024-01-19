@@ -12,7 +12,6 @@ export default function LogInPage() {
   const [password, setPassword] = useState("");
   const [cookies,setcookies] = useState('');
   const navigate = useNavigate();
-  const clientId =import.meta.env.VITE_GAPI_KEY_ENV;
 
   const handleSignUp = async () => {
     // Validate inputs and call signUp function
@@ -54,15 +53,7 @@ export default function LogInPage() {
   }
   
   useEffect(() => {
-    function start() {
-      gapi.client.init({
-        clientId: clientId,
-        scope: "",
-      });
-      
-    }
-    gapi.load("client:auth2", start);
-  
+   
     setcookies(checkCookie('yourCookieName'));
     console.log(cookies)
     return () => {
