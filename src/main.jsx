@@ -4,8 +4,6 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
 import SignUpPage from "./Pages/SignUpPage.jsx";
-import { GoogleOAuthProvider } from '@react-oauth/google';
-import LogInPage from "./Pages/LogInPage.jsx";
 
 
 const router = createBrowserRouter([
@@ -17,7 +15,7 @@ const router = createBrowserRouter([
     path: "/login",
     element: (
       
-        <LogInPage />
+        <SignUpPage />
     ),
   },
   {
