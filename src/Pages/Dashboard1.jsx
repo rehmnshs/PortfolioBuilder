@@ -8,107 +8,55 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import axios from "axios";
-
-function Dashboard1({userID}) {
-
+import { decode as base64_decode, encode as base64_encode } from "base-64";
+import logo from "../assets/logo.png";
+function Dashboard1() {
+  const [uid, setuid] = useState("");
   const [searchValue, setSearchValue] = useState("");
-  var sites = [
-    {
-      SiteName: "mohan",
-      Template: "Developer-1",
-      Source: "https://github.com/Portfoliify/Mohan-test-15-Portfolio-1",
-      Link: "http://localhost:5174",
-      Status: "Deploying...",
-      CreatedAt: "17-01-2024",
-    },
-    {
-      SiteName: "krish",
-      Template: "Developer-2",
-      Source: "https://github.com/Portfoliify/Mohan-test-15-Portfolio-1",
-      Link: "http://localhost:5173",
-      Status: "Deployed",
-      CreatedAt: "18-01-2024",
-    },
-    {
-      SiteName: "reh",
-      Template: "Developer-3",
-      Source: "https://github.com/Portfoliify/Mohan-test-15-Portfolio-1",
-      Link: "http://localhost:5173",
-      Status: "Deployed",
-      CreatedAt: "19-01-2024",
-    },
-    {
-      SiteName: "thu",
-      Template: "Developer-4",
-      Source: "https://github.com/Portfoliify/Mohan-test-15-Portfolio-1",
-      Link: "http://localhost:5173",
-      Status: "Deployed",
-      CreatedAt: "20-01-2024",
-    },
-    {
-      SiteName: "meh",
-      Template: "Developer-5",
-      Source: "https://github.com/Portfoliify/Mohan-test-15-Portfolio-1",
-      Link: "http://localhost:5173",
-      Status: "Deployed",
-      CreatedAt: "21-01-2024",
-    },
-    {
-      SiteName: "bruh",
-      Template: "Developer-1",
-      Source: "https://github.com/Portfoliify/Mohan-test-15-Portfolio-1",
-      Link: "http://localhost:5173",
-      Status: "Deployed",
-      CreatedAt: "17-01-2024",
-    },
-    {
-      SiteName: "lee",
-      Template: "Developer-2",
-      Source: "https://github.com/Portfoliify/Mohan-test-15-Portfolio-1",
-      Link: "http://localhost:5173",
-      Status: "Deployed",
-      CreatedAt: "18-01-2024",
-    },
-    {
-      SiteName: "taaa",
-      Template: "Developer-3",
-      Source: "https://github.com/Portfoliify/Mohan-test-15-Portfolio-1",
-      Link: "http://localhost:5173",
-      Status: "Deployed",
-      CreatedAt: "19-01-2024",
-    },
-    {
-      SiteName: "raaa",
-      Template: "Developer-4",
-      Source: "https://github.com/Portfoliify/Mohan-test-15-Portfolio-1",
-      Link: "http://localhost:5173",
-      Status: "Deployed",
-      CreatedAt: "20-01-2024",
-    },
-    {
-      SiteName: "hehe",
-      Template: "Developer-5",
-      Source: "https://github.com/Portfoliify/Mohan-test-15-Portfolio-1",
-      Link: "http://localhost:5173",
-      Status: "Deployed",
-      CreatedAt: "21-01-2024",
-    },
-  ];
+  const [sites, setsites] = useState([]);
+
+  function getCookie(cookieName) {
+    const cookies = document.cookie.split("; ");
+
+    for (const cookie of cookies) {
+      const [name, encodedValue] = cookie.split("=");
+
+      if (name === cookieName) {
+        const decodedValue = decodeURIComponent(encodedValue);
+
+        try {
+          // Try to parse the cookie value as JSON
+          return JSON.parse(decodedValue);
+        } catch (error) {
+          // If parsing fails, return the original value
+          return decodedValue;
+        }
+      }
+    }
+
+    return null; // Return null if the cookie with the specified name is not found
+  }
+
   const [foundSites, setFoundSites] = useState([...sites]);
   const [updatedSites, setUpdatedSites] = useState([...sites]);
   useEffect(() => {
-    axios.get('https://localhost:5173/User/Sites',{
-      userID: userID,
-    })
-    .then(() => {
-      console.log("User data fetched")
-      const sites = res
-    
-    })
-    .catch((e) => {
-      console.log("error fetching user data")
-    })
-  },[])
+    setuid(base64_encode(getCookie("yourCookieName")));
+
+    axios
+      .get("https://portfoliifybackend-tp8u.onrender.com/user/sites", {
+        params: {
+          UserID: "cmVobW5zaHNhekBnbWFpbC5jb20=",
+        },
+      })
+      .then((res) => {
+        console.log("User data fetched");
+
+        setsites(res.data.sites);
+      })
+      .catch((e) => {
+        console.log("error fetching user data");
+      });
+  }, []);
   useEffect(() => {
     const resultSites = updatedSites.filter((site) =>
       site.SiteName.toLowerCase().includes(searchValue.toLowerCase())
@@ -116,47 +64,34 @@ function Dashboard1({userID}) {
     setFoundSites(resultSites);
   }, [searchValue]);
 
-  async function statusPolling(sitesToCheck) {
-    const FetchInterval = setInterval(async () => {
-      for (const site of sitesToCheck) {
-        console.log(site.SiteName);
-        try {
-          const response = await fetch(site.Link);
-          if (response.status == 200) {
-            site.Status = "Deployed";
-            console.log(sitesToCheck, updatedSites);
-            setUpdatedSites(
-              updatedSites.filter((site) => site.Status == "Deployed"),
-              ...sitesToCheck
-            );
-            axios
-            .post("http://localhost:3001/User/Site", {
-              UserID: userID,
-              SiteID: site.SiteID,
-              Status: "Deployed",
-            })
-            .then((response) => {
-              console.log("Post request successful");
-            })
-            .catch((error) => {
-              console.error("Error during post request:");
-            });
-            clearInterval(FetchInterval);
-            return;
-          } else {
-            site.Status = "Deploying...";
-          }
-        } catch (error) {
-          console.error("Error checking deployment status:", error);
-          site.Status = "Deploying...";
-        }
-      }
-    }, 10000);
+  async function statusTimer(sitesToSet) {
+    for (const site of sitesToSet) {
+      setTimeout(() => {
+        site.Status = "Deployed";
+        setUpdatedSites(
+          updatedSites.filter((site) => site.Status == "Deployed"),
+          ...sitesToSet
+        );
+        axios
+          .post("http://localhost:3001/user/site", {
+            UserID: userID,
+            SiteID: site.SiteID,
+            Status: "Deployed",
+          })
+          .then((response) => {
+            console.log("Site status updated");
+          })
+          .catch((error) => {
+            console.error("Error during site status update");
+          });
+      }, 180000);
+    }
   }
-  statusPolling(updatedSites.filter((site) => site.Status == "Deploying..."));
+  statusTimer(updatedSites.filter((site) => site.Status == "Deploying"));
   return (
     <section className="flex flex-col gap-0 h-auto w-[100vw] ">
       <div className=" h-[8vh] max-w-[100vw] xl:max-w-[60vw] xl:mx-[20vw] "></div>
+
       <div className=" h-[92vh] max-w-[100vw] xl:max-w-[60vw] xl:mx-[20vw]">
         <div className="h-[12vh] flex items-center ">
           <p className="capitalize text-[5vh] px-[1.8vw]">dashboard</p>
@@ -196,12 +131,12 @@ function Dashboard1({userID}) {
               </tr>
             </thead>
             <tbody>
-              {foundSites.map((site) => (
+              {sites.map((site) => (
                 <tr
-                  key={site.SiteName}
+                  key={site.SiteID}
                   className="border-b text-gray-800 text-center h-[10vh] xl:h-[7vh]"
                 >
-                  <td className="py-2 font-semibold">{site.SiteName}</td>
+                  <td className="py-2 font-semibold">dadwa</td>
                   <td className="py-2">
                     {site.Status == "Deployed" ? (
                       <FontAwesomeIcon

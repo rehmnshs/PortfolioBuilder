@@ -1,4 +1,6 @@
 import React from "react";
+import './d1.css';
+import logo from "../assets/logo.png";
 
 const Dashboard = () => {
   const repeatTimes = 9 * 9;
@@ -33,7 +35,21 @@ const Dashboard = () => {
   }
   return (
     <section className="bg-black text-white h-[100vh] w-[100vw]  overflow-hidden">
-      <div className=" h-[8vh] w-[100vw]  "></div>
+      <div className=" h-[8vh] w-[100vw] " >
+
+<div className="headerLanding">
+          <div className="headerContentsL">
+          <div className="pad">
+          <img src={logo} />
+              <div>Log In</div>
+              <div>Sign Up</div>
+          </div>
+            <div id="templatebutton">View Templates</div>
+          </div>{" "}
+      
+          
+</div>
+      </div>
       <div className="h-[92vh] w-[100vw] flex ">
         <div className="w-[50vw] h-[92vh] flex items-center overflow-visible">
           <div className="ml-[3vw]">

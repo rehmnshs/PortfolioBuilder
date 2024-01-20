@@ -101,9 +101,9 @@ function App() {
               >
                 Log In{" "}
               </a>
-              <button
-                type="button"
-                class="btn btn-primary"
+              <div
+                
+                class=""
                 
                 id="signup"
                 onClick={() => {
@@ -111,7 +111,7 @@ function App() {
                 }}
               >
                 Get Started
-              </button>
+              </div>
             </div>
           )}
           {uid && (
@@ -162,14 +162,14 @@ function App() {
                 <a
                   href={
                     uid
-                      ? `https://mohan-test-15-portfolio-2.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`
+                      ? `https://developer-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`
 
                       : "http://localhost:5173/login"
                   }
                   target="_blank"
                 >
                   {" "}
-                  <button type="button" class="btn btn-primary">
+                  <button type="button"id="aas1">
                     Edit
                   </button>
                 </a>
@@ -178,7 +178,7 @@ function App() {
                   target="_blank"
                 >
                   {" "}
-                  <button type="button" class="btn btn-outline-primary">
+                  <button type="button"id="aas">
                     View
                   </button>{" "}
                 </a>
@@ -194,13 +194,13 @@ function App() {
                 <a
                   href={
                     uid
-                      ? `https://jayanth-kpv-portfolio-1.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`
+                      ? `https://photography1-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`
                       : "http://localhost:5173/login"
                   }
                   target="_blank"
                 >
                   {" "}
-                  <button type="button" class="btn btn-primary">
+                  <button type="button"id="aas1">
                     Edit
                   </button>
                 </a>
@@ -209,7 +209,7 @@ function App() {
                   target="_blank"
                 >
                   {" "}
-                  <button type="button" class="btn btn-outline-primary">
+                  <button type="button"id="aas">
                     View
                   </button>{" "}
                 </a>
@@ -225,14 +225,14 @@ function App() {
                 <a
                   href={
                     uid
-                      ? `https://mohan-test-15-portfolio-2.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`
+                      ? `https://design-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`
 
                       : "http://localhost:5173/login"
                   }
                   target="_blank"
                 >
                   {" "}
-                  <button type="button" class="btn btn-primary">
+                  <button type="button"id="aas1">
                     Edit
                   </button>
                 </a>
@@ -241,7 +241,7 @@ function App() {
                   target="_blank"
                 >
                   {" "}
-                  <button type="button" class="btn btn-outline-primary">
+                  <button type="button" id="aas">
                     View
                   </button>{" "}
                 </a>
@@ -257,14 +257,14 @@ function App() {
                 <a
                   href={
                     uid
-                      ? `https://templateportfolio.onrender.com/?id=${base64_encode(uid)}`
+                      ? `https://photography2-portfolio-editable.onrender.com/?id=${base64_encode(uid)}`
 
                       : "http://localhost:5173/login"
                   }
                   target="_blank"
                 >
                   {" "}
-                  <button type="button" class="btn btn-primary">
+                  <button type="button" id="aas1">
                     Edit
                   </button>
                 </a>
@@ -273,7 +273,7 @@ function App() {
                   target="_blank"
                 >
                   {" "}
-                  <button type="button" class="btn btn-outline-primary">
+                  <button type="button" class="viewbt" id="aas">
                     View
                   </button>{" "}
                 </a>

@@ -47,6 +47,13 @@ cursor: pointer;
   font-size: 18px;
   border-radius: 20px;
   width: 150px;
+  background-color: rgb(168 85 247);
+  color: white;
+  display: flex;
+  justify-content: center;
+  height: 39px;
+  align-items: center;
+  cursor: pointer;
 }
 .headerr {
   height: 15%;
@@ -159,9 +166,12 @@ cursor: pointer;
 .btfulls  a{
 
 }
+/* BUTTONS */
+
+
+
 
 .btfulls > a > button{
-  background-color: rgb(168 85 247);
   border-radius: 50px;
   width: 5vw;
   height: 5vh;
@@ -169,6 +179,27 @@ cursor: pointer;
   font-size: 0.80vw;
   color: white;
 }
+
+
+#aas1{
+  background-color: rgb(168 85 247);
+}
+#aas{
+  background-color: white;
+border: rgb(168 85 247) 1px solid;
+color:rgb(168 85 247);
+transition: all 0.5s;
+}
+#aas:hover{
+  background-color: rgb(168 85 247);
+border: rgb(168 85 247) 1px solid;
+color:white;
+}
+
+
+
+
+/*BUTTONS END */
 .simgo:hover .overlay  {
   opacity: 1;
   z-index: 100;
@@ -333,4 +364,7 @@ gap: 20px;
     outline: none;
     box-shadow: 0 4px 10px 0 rgba(0,0,0,0.16);
   }
-  
+.awd{
+  border: #838D99 1px solid;
+
+}

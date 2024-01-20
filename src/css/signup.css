@@ -2,6 +2,13 @@
   height: 100vh;
   width: 100vw;
 }
+input:focus, input:active {
+  border: none;
+  outline: none;
+ 
+
+}
+
 .headerA {
   height: 15%;
   display: flex;
@@ -23,6 +30,7 @@
 }
 .signbA {
   font-family: sans-serif;
+  font-size: 18px;
 }
 .loginboxA {
   display: flex;
@@ -44,10 +52,10 @@
 }
 .emailA {
   width: 300px;
-  height: 250px;
+  height: auto;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
 
 }
@@ -55,14 +63,23 @@
   content: "";
   position: absolute;
   width: 1px;
-  height: 350px;
+  height: 200px;
   background-color: grey;
-  top: 50%;
+  top: 48%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -48%);
   opacity: 0.5;
-}
+  animation: up 0.5s reverse both ;
 
+}
+@keyframes up {
+  0%{
+    height: 300px;
+  }
+  100%{
+    height: 200px;
+  }
+}
 .B {
   width: 300px;
 }
@@ -102,4 +119,26 @@
 }
 .emailA > input {
   border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+  width: 67%;
+  font-size: 18px;
+
+  
+}
+.emailA >div > input:hover {
+  border: none;
+  border-bottom: 1px solid black; /* Adjust color and opacity as needed */
+  width: 67%;
+  
+}
+.emailA >div> input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+  width: 67%;
+  font-size: 18px;
+
+  
+}
+.emailA > div{
+  position: relative;
 }
