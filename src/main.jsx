@@ -21,13 +21,7 @@ const router = createBrowserRouter([
         <Dashboard />
     ),
   },
-  {
-    path: "/login",
-    element: (
-      
-        <LogInPage />
-    ),
-  },
+
   {
     path: "/dashboard",
     element: (
