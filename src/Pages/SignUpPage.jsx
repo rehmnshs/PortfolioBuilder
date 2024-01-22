@@ -28,9 +28,9 @@ export default function SignUpPage() {
           );
           document.cookie = `yourCookieName=${
             req.data
-          }; path=/; samesite=strict; max-age=${30 * 24 * 60 * 60}; secure`;
+          }; path=/; sameswwwwwwwwwwite=strict; max-age=${30 * 24 * 60 * 60}; secure`;
 
-          navigate("/");
+          navigate('/templates')
         } catch (error) {
           console.log(error);
         }

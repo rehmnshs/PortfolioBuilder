@@ -1,8 +1,11 @@
 import React from "react";
 import './d1.css';
 import logo from "../assets/logo.png";
+import { useNavigate } from "react-router-dom";
 
 const Dashboard = () => {
+  const navigate = useNavigate();
+
   const repeatTimes = 9 * 9;
   const gridItems = [];
   const notOutlined = new Set([
@@ -41,10 +44,9 @@ const Dashboard = () => {
           <div className="headerContentsL">
           <div className="pad">
           <img src={logo} />
-              <div>Log In</div>
-              <div>Sign Up</div>
+ 
           </div>
-            <div id="templatebutton">View Templates</div>
+            <div id="templatebutton" onClick={()=>{navigate('/templates')}}>View Templates</div>
           </div>{" "}
       
           
@@ -68,7 +70,7 @@ const Dashboard = () => {
               </span>
             </p>
             <div>
-              <div className="bg-white w-[20vw] h-[10vh] text-black flex justify-center items-center text-[2vw] hover:bg-purple-500 duration-500 hover:text-white">
+              <div className="bg-white w-[20vw] h-[10vh] text-black flex justify-center items-center text-[2vw]" id='stbuild' onClick={()=>{navigate('templates')}}>
                 Start Building
               </div>
             </div>

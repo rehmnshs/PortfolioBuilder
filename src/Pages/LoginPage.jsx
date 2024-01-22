@@ -30,7 +30,7 @@ export default function LogInPage() {
         req.data
       }; path=/; samesite=strict; max-age=${30 * 24 * 60 * 60}; secure`;
 
-      navigate("/");
+      navigate('/templates')
     } catch (error) {
       console.log(error);
     }

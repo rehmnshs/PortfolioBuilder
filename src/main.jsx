@@ -11,14 +11,14 @@ import Dashboard from "./Pages/LandingPage.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/templates",
     element: <App />,
   },
   {
-    path: "/dashboard1",
+    path: "/",
     element: (
       
-        <Dashboard1 />
+        <Dashboard />
     ),
   },
   {
@@ -32,7 +32,7 @@ const router = createBrowserRouter([
     path: "/dashboard",
     element: (
       
-        <Dashboard />
+        <Dashboard1 />
     ),
   },
   {

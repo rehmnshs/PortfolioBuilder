@@ -24,7 +24,7 @@ export default function LoginButton() {
          document.cookie = `yourCookieName=${encodeURIComponent(email)}; path=/; samesite=strict; max-age=${30 * 24 * 60 * 60}; secure`;
    
        console.log("success");
-       navigate('/')
+       navigate('/templates')
  
     
      }
