@@ -4,7 +4,6 @@ import "../css/Login.css";
 
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import { gapi } from "gapi-script";
 import LoginButton from "../Components/LoginButton";
 
 export default function LogInPage() {

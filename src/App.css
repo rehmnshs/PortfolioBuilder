@@ -2,9 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 .wholepage {
   height: 100vh;
   width: 100vw;
@@ -23,13 +20,13 @@
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
-.headerContents{
+.headerContents {
   display: flex;
   align-items: center;
-gap: 50px;  
-font-family: sans-serif;
-font-size: 0.9vw;
-cursor: pointer;
+  gap: 50px;
+  font-family: sans-serif;
+  font-size: 0.9vw;
+  cursor: pointer;
 }
 .authOptions {
   display: flex;
@@ -64,16 +61,15 @@ cursor: pointer;
   padding-left: 10vh;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
-    justify-content: space-between;
+  justify-content: space-between;
 }
 .headerr > div {
   font-size: 2vw;
 }
-.searchbar{
+.searchbar {
   padding-right: 5vh;
-
 }
-.searchbar >svg{
+.searchbar > svg {
   cursor: pointer;
 }
 .showcase {
@@ -88,18 +84,15 @@ cursor: pointer;
   font-size: 20px;
 }
 .simg {
-
   width: 27vw;
   height: auto;
 }
 .simgo {
   position: relative;
-
 }
-.btfulls::before{
+.btfulls::before {
   position: relative;
 }
-
 
 @keyframes fadein {
   0% {
@@ -124,14 +117,14 @@ cursor: pointer;
 
 .textdown {
   padding-top: 2vh;
-  font-size: 0.84vw;
+  font-size: 18px;
   font-family: sans-serif;
   opacity: 0.9;
 }
-.headerofoverlay{
+.headerofoverlay {
   position: relative;
 }
-.overlay{
+.overlay {
   opacity: 0;
   position: absolute;
   height: 100%;
@@ -163,60 +156,47 @@ cursor: pointer;
   align-items: center;
   transition: all 0.5s;
 }
-.btfulls  a{
-
+.btfulls a {
 }
 /* BUTTONS */
 
-
-
-
-.btfulls > a > button{
+.btfulls > a > button {
   border-radius: 50px;
   width: 5vw;
   height: 5vh;
   z-index: 101;
-  font-size: 0.80vw;
+  font-size: 0.8vw;
   color: white;
 }
 
-
-#aas1{
+#aas1 {
   background-color: rgb(168 85 247);
 }
-#aas{
+#aas {
   background-color: white;
-border: rgb(168 85 247) 1px solid;
-color:rgb(168 85 247);
-transition: all 0.5s;
+  border: rgb(168 85 247) 1px solid;
+  color: rgb(168 85 247);
+  transition: all 0.5s;
 }
-#aas:hover{
+#aas:hover {
   background-color: rgb(168 85 247);
-border: rgb(168 85 247) 1px solid;
-color:white;
+  border: rgb(168 85 247) 1px solid;
+  color: white;
 }
-
-
-
 
 /*BUTTONS END */
-.simgo:hover .overlay  {
+.simgo:hover .overlay {
   opacity: 1;
   z-index: 100;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); 
+  background-color: rgba(255, 255, 255, 0.8);
 }
-.simgo:hover .btfulls  {
+.simgo:hover .btfulls {
   opacity: 1;
   z-index: 100;
 }
-.accmenu{
+.accmenu {
   position: absolute;
-  left:40%;
+  left: 40%;
   top: 5%;
   height: 50px;
   width: 20vh;
@@ -226,32 +206,31 @@ color:white;
   justify-content: space-between;
   padding-left: 10px;
   padding-right: 10px;
-  
 }
-.accmenu1{
-  
+.accmenu1 {
   display: flex;
   gap: 10px;
 }
 
-.B1{
+.B1 {
   width: 300px;
 }
 
-.email{
+.email {
   position: absolute;
-width: 100%;
-height: 100%;
-display: flex;
-align-items: center;
-justify-content: center;
-left: -5%;
-opacity: 0.8;}
-.bb1 >svg{
-position: absolute;
-left: 85%;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  left: -5%;
+  opacity: 0.8;
 }
-.B1> div {
+.bb1 > svg {
+  position: absolute;
+  left: 85%;
+}
+.B1 > div {
   position: relative;
   height: 5vh;
   width: 225px;
@@ -267,18 +246,19 @@ left: 85%;
   width: 15%;
   margin-left: 2px;
   background-color: white;
-  background: white url("./assets/person_FILL1_wght400_GRAD0_opsz24.svg") center center no-repeat;
+  background: white url("./assets/person_FILL1_wght400_GRAD0_opsz24.svg") center
+    center no-repeat;
   background-size: contain; /* or contain, depending on your preference */
   padding: 0px;
   border-radius: 3px;
 }
 
-.bt1{
+.bt1 {
   background-color: rgb(168 85 247);
-border: black 1px solid;
+  border: black 1px solid;
 }
-.dropdown{
-position: absolute;
+.dropdown {
+  position: absolute;
   height: 0px;
   width: 225px;
   border-radius: 15px;
@@ -288,83 +268,127 @@ position: absolute;
   border-top-right-radius: 0px;
   border: white 1px solid;
   color: white;
-background-color: white;
-transition: all 0.5s ;}
-.dropdown >svg{
-
+  background-color: white;
+  transition: all 0.5s;
 }
-.dropdown >div{
-opacity: 1;
-height: 100%;
-width: 100%;
-display: flex;
-
-gap: 10px;
-align-items: center;
-padding-left: 10px;
-cursor: pointer;
-
+.dropdown > svg {
 }
+.dropdown > div {
+  opacity: 1;
+  height: 100%;
+  width: 100%;
+  display: flex;
 
-.open{
-  height: 100px;
-  border:  rgba(128, 128, 128, 0.2) 1px solid;
-color: grey;
-
-}
-.accountcenter{
-
-background-color: white;
-height: 50px;
-display: flex;
-align-items: center;
-
-padding-right: 10px;
-
-gap: 20px;
-}
-.svgdown{
+  gap: 10px;
+  align-items: center;
+  padding-left: 10px;
   cursor: pointer;
 }
-.emailname{
+
+.open {
+  height: 100px;
+  border: rgba(128, 128, 128, 0.2) 1px solid;
+  color: grey;
+}
+.accountcenter {
+  background-color: white;
+  height: 50px;
+  display: flex;
+  align-items: center;
+
+  padding-right: 10px;
+
+  gap: 20px;
+}
+.svgdown {
+  cursor: pointer;
+}
+.emailname {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100%;
- gap: 5px; 
+  gap: 5px;
   align-items: center;
   padding-left: 10px;
-  
 }
 
-.emailtext{
+.emailtext {
   color: black;
-
 }
-.input-elevated{
+.input-elevated {
   font-size: 16px;
   line-height: 1.5;
   border: none;
-  background: #FFFFFF;
+  background: #ffffff;
   background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill='%23838D99' d='M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z'></path></svg>");
   background-repeat: no-repeat;
   background-position: 10px 10px;
   background-size: 20px 20px;
-  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.08);
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.08);
   border-radius: 5px;
-  width: 300px;
-  padding: .5em 1em .5em 2.5em;
-  } 
-  
-  .input-elevated::placeholder{
-    color: #838D99;
-  }
-  
-  .input-elevated:focus {
-    outline: none;
-    box-shadow: 0 4px 10px 0 rgba(0,0,0,0.16);
-  }
-.awd{
-  border: #838D99 1px solid;
+  width: 30vw;
+  padding: 0.5em 1em 0.5em 2.5em;
+}
 
+.input-elevated::placeholder {
+  color: #838d99;
+}
+
+.input-elevated:focus {
+  outline: none;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.16);
+}
+.awd {
+  border: #838d99 1px solid;
+}
+@media only screen and (max-width: 767px) {
+  .searchbar {
+    opacity: 0;
+    position: absolute;
+    visibility: hidden;
+  }
+  .headerr > div {
+    font-size: 20px;
+
+  }
+  .headerr{
+
+padding-left: 0px;
+height: 15vh;
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+  }
+  .awt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0px;
+    padding-left: 0px;
+  }
+  .showcases {
+    padding: 30px;
+    padding-top: 0px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6vh;
+  }
+  .simg{
+    width: 100vw;
+height: 50%;
+  }
+  .textdown{
+    font-size: 15px;
+    opacity: 0.8;
+  }
+  .btfulls > a > button {
+    border-radius: 50px;
+    width: 20vw;
+    height: 5vh;
+    z-index: 101;
+    font-size: 15px;
+    color: white;
+  }
 }
