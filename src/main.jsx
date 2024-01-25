@@ -3,7 +3,7 @@ import "./index.css";
 import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider, Route } from "react-router-dom";
-import LoginPage from "./Pages/LoginPage.jsx";
+import LogInPage from "./Pages/LoginPage.jsx";
 import Dashboard1 from "./Pages/Dashboard1.jsx";
 import Dashboard from "./Pages/LandingPage.jsx";
 import SignUpPage from "./Pages/SignUpPage.jsx";
@@ -40,7 +40,7 @@ const router = createBrowserRouter([
     path: "/login",
     element: (
       
-        <LoginPage />
+        <LogInPage />
     ),
   },
 ]);
