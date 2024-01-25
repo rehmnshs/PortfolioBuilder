@@ -172,16 +172,18 @@ input:focus, input:active {
   .emailA{
     padding-left: 0px;
   }
-  .emailA::before {
+  .emailA::before{opacity: 0;}
+  #aaSs::after {
     content: "";
     position: absolute;
+
     width: 1px;
-    height: 200px;
-  top: 58%;
-  left: 15%;
+    height: 150px;
+rotate: 90deg;
+
     background-color: grey;
   
     opacity: 0.5;
-    rotate: 90deg;
+
   }
 }
