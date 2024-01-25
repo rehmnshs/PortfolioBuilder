@@ -1,118 +1,113 @@
-input:focus, input:active {
-
-
+input:focus,
+input:active {
 }
-input{
+input {
   position: relative;
 }
-#e1{
+#e1 {
   border: none;
   border-bottom: 1px solid black;
 }
-#span234{
+#span234 {
   color: rgb(168 85 247);
   cursor: pointer;
   font-size: 18px;
 }
 .loginboxAL {
   margin-top: 20px;
-    height: 400px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 100px;
-  }
-  .emailB{
-    width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+}
+.emailB {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  justify-content: center;
+}
+.emailB::before {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 300px;
+  background-color: grey;
+  top: 48%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  transition: all 0.5s;
+  animation: up 0.5s both;
+}
+
+@keyframes up {
+  0% {
     height: 300px;
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    justify-content: center;
+  }
+  100% {
+    height: 200px;
+  }
+}
+.B {
+  width: 300px;
+}
+.B > div {
+  position: relative;
+  height: 5vh;
+  width: 350px;
+  background: blueviolet;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.B > div::before {
+  content: "";
+  position: absolute;
+  height: 90%;
+  width: 15%;
+  margin-left: 2px;
+  background-color: white;
+  background: white url("../assets/Google__G__logo.svg") center center no-repeat;
+  background-size: contain; /* or contain, depending on your preference */
+  padding: 0px;
+  border-radius: 3px;
+}
 
-  }
-  .emailB::before {
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 300px;
-    background-color: grey;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    opacity: 0.5;
-    transition: all 0.5s;
-    animation: up 0.5s both;
-  }
-
-  @keyframes up {
-    0%{
-      height: 300px;
-    }
-    100%{
-      height: 200px;
-    }
-  }
-  .B {
-    width: 300px;
-  }
-  .B > div {
-    position: relative;
-    height: 5vh;
-    width: 350px;
-    background: blueviolet;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-  .B > div::before {
-    content: "";
-    position: absolute;
-    height: 90%;
-    width: 15%;
-    margin-left: 2px;
-    background-color: white;
-    background: white url("../assets/Google__G__logo.svg") center center no-repeat;
-    background-size: contain; /* or contain, depending on your preference */
-    padding: 0px;
-    border-radius: 3px;
-  }
-  
-
-  #aaSs{
-    font-size: 18px;
-    background-color: white;
-    border: rgba(168, 85, 247, 0.25) 1px solid;
-    color:rgb(168 85 247);
-    transition: all 0.5s;
-    height: 42px;
-    border-radius: 30px;
-    width:120px;
-    font-weight: 600;
-    
-  }
-  #aaSs:hover{
-    background-color: rgb(168 85 247);
+#aaSs {
+  font-size: 18px;
+  background-color: white;
+  border: rgba(168, 85, 247, 0.25) 1px solid;
+  color: rgb(168 85 247);
+  transition: all 0.5s;
+  height: 42px;
+  border-radius: 30px;
+  width: 120px;
+  font-weight: 600;
+}
+#aaSs:hover {
+  background-color: rgb(168 85 247);
   border: rgb(168 85 247) 1px solid;
-  color:white;
-  }
-  #paradown{
-    
+  color: white;
+}
+#paradown {
   margin-top: 100px;
 
-    width: 100vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-opacity: 0.7;
-  }
-  .emailB > div{
-    position: relative;
-  }
-  .label{
-    position: absolute;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.7;
+}
+.emailB > div {
+  position: relative;
+}
+.label {
+  position: absolute;
   z-index: 1000;
   top: 0;
   left: 0;
@@ -120,24 +115,66 @@ opacity: 0.7;
   transition: all 0.2s;
   font-size: 18px;
   pointer-events: none;
+}
+.emailB > div > input {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+  width: 67%;
+  font-size: 18px;
+}
 
+input:focus + .label,
+input:not(:placeholder-shown) + .label {
+  opacity: 1;
+  top: -15px;
+  bottom: 0px;
+  left: 0px;
+  font-size: 11px;
+  opacity: 1;
+  color: #404040;
+}
+@media only screen and (max-width: 767px) {
+  .headerB {
+    padding-left: 10px;
+    padding-top: 10px;
   }
-  .emailB >div> input {
-    border: none;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
-    width: 67%;
-    font-size: 18px;
-  
+  .loginboxAL {
+    flex-direction: column;
+    padding-top: 100px;
     
   }
-  
-  input:focus + .label, input:not(:placeholder-shown) + .label {
-    opacity:1;
-    top: -15px;
-		bottom: 0px;
-		left: 0px;
-		font-size: 11px;
-		opacity: 1;
-		color: #404040;
+  .emailB {
+    width: 50%;
+    padding-left: 100px;
   }
-  
+  .emailB > div > input {
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); /* Adjust color and opacity as needed */
+    width: 100%;
+    font-size: 18px;
+  }
+  #paradown {
+    align-items: center;
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-bottom: 50px;
+  }
+  .emailB {
+    padding-left: 0px;
+  }
+  .emailB::before {
+    opacity: 0;
+  }
+  #aaSs::after {
+    content: "";
+    position: absolute;
+
+    width: 1px;
+    height: 150px;
+    rotate: 90deg;
+
+    background-color: grey;
+
+    opacity: 0.5;
+  }
+}
