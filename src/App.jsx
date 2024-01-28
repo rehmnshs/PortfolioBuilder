@@ -164,7 +164,7 @@ function App() {
                     uid
                       ? `https://developer-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`
 
-                      : "http://localhost:5173/login"
+                      : "https://pb2-85wk.onrender.com/signup"
                   }
                   target="_blank"
                 >
