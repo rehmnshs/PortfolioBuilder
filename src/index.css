@@ -28,7 +28,7 @@
 }
 .padL {
   width: 90%;
-  height: 98%;
+  height: 96%;
   background-color: black;
   color: white;
   display: flex;
@@ -48,6 +48,7 @@
   position: relative;
   z-index: 1;
   transition: all 0.35s;
+  padding: 20px;
 }
 #templatebutton:after,
 #stbuild::after {
