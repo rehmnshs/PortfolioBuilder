@@ -17,6 +17,9 @@ function App() {
 
   const [uid,setuid] = useState('');
   const navigate = useNavigate();
+  function navigate1(){
+    navigate('/signup');
+  }
   function getCookie(cookieName) {
     const cookies = document.cookie.split("; ");
 
@@ -80,7 +83,7 @@ function App() {
 
 
   }, []);
-  
+
 
   return (
     <>
@@ -159,20 +162,12 @@ function App() {
                 <div className="overlay"></div>
               </div>
               <div className="btfulls">
-                <a
-                  href={
-                    uid
-                      ? `https://developer-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`
-
-                      : "https://pb2-85wk.onrender.com/signup"
-                  }
-                 
-                >
+               <a>
                   {" "}
-                  <button type="button"id="aas1">
+                  <button type="button" id="aas1" onClick={()=>{uid ? window.location.href = `https://developer-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}` : navigate('/signup')}}>
                     Edit
                   </button>
-                </a>
+               </a>
                 <a
                   href="https://mohan-test-15-portfolio-2.onrender.com/"
                   target="_blank"
