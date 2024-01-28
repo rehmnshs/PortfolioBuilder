@@ -166,7 +166,7 @@ function App() {
 
                       : "https://pb2-85wk.onrender.com/signup"
                   }
-                  target="_blank"
+                 
                 >
                   {" "}
                   <button type="button"id="aas1">
