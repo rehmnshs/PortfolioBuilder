@@ -153,7 +153,7 @@ function App() {
         <div className="showcase">
           <div className="awt">All Website Templates</div>
           <div className="showcases">
-            <div className="simgo">
+           {/* <div className="simgo">
               <div className="headerofoverlay">
                 <img className="simg" src={pic1} />
                 <div className="overlay"></div>
@@ -184,7 +184,7 @@ function App() {
                 </a>
               </div>
               <div className="textdown">Developer portfolio</div>
-            </div>
+            </div> */}
             <div className="simgo">
               <div className="headerofoverlay">
                 <img className="simg" src={pic2} />
@@ -216,6 +216,7 @@ function App() {
               </div>
               <div className="textdown">Photographer portfolio</div>
             </div>
+            {/*
             <div className="simgo">
               <div className="headerofoverlay">
                 <img className="simg" src={pic4} />
@@ -247,8 +248,8 @@ function App() {
                 </a>
               </div>
               <div className="textdown">Designer portfolio</div>
-            </div>
-            <div className="simgo">
+            </div> */}
+           {/* <div className="simgo">
               <div className="headerofoverlay">
                 <img className="simg" src={pic3} />
                 <div className="overlay"></div>
@@ -279,7 +280,7 @@ function App() {
                 </a>
               </div>
               <div className="textdown">Photographer portfolio</div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

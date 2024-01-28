@@ -43,7 +43,6 @@ const Dashboard = () => {
 <div className="headerLanding">
           <div className="headerContentsL">
           <div className="padL">
-          <img src={logo} />
  
           </div>
             <div id="templatebutton" onClick={()=>{navigate('templates')}}>View Templates</div>
