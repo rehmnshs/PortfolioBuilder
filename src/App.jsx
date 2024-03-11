@@ -180,7 +180,7 @@ function App() {
               </div>
               <div className="textdown">Developer portfolio</div>
             </div> 
-            {/*
+          
             <div className="simgo">
               <div className="headerofoverlay">
                 <img className="simg" src={pic2} />
@@ -188,15 +188,11 @@ function App() {
               </div>
               <div className="btfulls">
                 <a
-                  href={
-                    uid
-                      ? `https://photography1-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`
-                      : "http://localhost:5173/login"
-                  }
-                  target="_blank"
+             
+              
                 >
                   {" "}
-                  <button type="button"id="aas1">
+                  <button type="button"id="aas1" onClick={()=>{uid ? window.location.href = `https://photography1-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}` : navigate('/signup')}}>
                     Edit
                   </button>
                 </a>
@@ -211,8 +207,8 @@ function App() {
                 </a>
               </div>
               <div className="textdown">Photographer portfolio</div>
-            </div> */}
-            {/*
+            </div> 
+           
             <div className="simgo">
               <div className="headerofoverlay">
                 <img className="simg" src={pic4} />
@@ -220,21 +216,16 @@ function App() {
               </div>{" "}
               <div className="btfulls">
                 <a
-                  href={
-                    uid
-                      ? `https://design-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`
-
-                      : "http://localhost:5173/login"
-                  }
-                  target="_blank"
+         
+               
                 >
                   {" "}
-                  <button type="button"id="aas1">
+                  <button type="button"id="aas1" onClick={()=>{uid ? window.location.href = `https://design-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}` : navigate('/signup')}}>
                     Edit
                   </button>
                 </a>
                 <a
-                  href="https://mohan-test-15-portfolio-2.onrender.com/"
+                  href='https://design-portfolio-editable.onrender.com'
                   target="_blank"
                 >
                   {" "}
@@ -244,24 +235,19 @@ function App() {
                 </a>
               </div>
               <div className="textdown">Designer portfolio</div>
-            </div> */}
-           {/* <div className="simgo">
+            </div> 
+            <div className="simgo">
               <div className="headerofoverlay">
                 <img className="simg" src={pic3} />
                 <div className="overlay"></div>
               </div>{" "}
               <div className="btfulls">
                 <a
-                  href={
-                    uid
-                      ? `https://photography2-portfolio-editable.onrender.com/?id=${base64_encode(uid)}`
-
-                      : "http://localhost:5173/login"
-                  }
-                  target="_blank"
+       
+           
                 >
                   {" "}
-                  <button type="button" id="aas1">
+                  <button type="button" id="aas1" onClick={()=>{uid ? window.location.href = `https://photography2-portfolio-editable.onrender.com/?id=${base64_encode(uid)}` : navigate('/signup')}}>
                     Edit
                   </button>
                 </a>
@@ -276,7 +262,7 @@ function App() {
                 </a>
               </div>
               <div className="textdown">Photographer portfolio</div>
-            </div> */}
+            </div> 
           </div>
         </div>
       </div>
