@@ -95,15 +95,7 @@ function App() {
           </div>{" "}
           {!uid && (
             <div className="authOptions">
-              <a
-                className="login"
-                href=""
-                onClick={() => {
-                  navigate("/login");
-                }}
-              >
-                Log In{" "}
-              </a>
+      
               <div
                 
                 class=""
@@ -156,7 +148,7 @@ function App() {
         <div className="showcase">
           <div className="awt">All Website Templates</div>
           <div className="showcases">
-          {/*
+         
            <div className="simgo">
               <div className="headerofoverlay">
                 <img className="simg" src={pic1} />
@@ -181,7 +173,7 @@ function App() {
               </div>
               <div className="textdown">Developer portfolio</div>
             </div> 
-          */}
+        
             <div className="simgo">
               <div className="headerofoverlay">
                 <img className="simg" src={pic2} />
