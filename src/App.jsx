@@ -157,7 +157,7 @@ function App() {
               <div className="btfulls">
                <a>
                   {" "}
-                  <button type="button" id="aas1" onClick={()=>{uid ? window.location.href = `https://developer-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}` : navigate('/signup')}}>
+                  <button type="button" id="aas1" onClick={() => { uid ? window.open(`https://developer-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`, '_blank') : navigate('/signup') }}>
                     Edit
                   </button>
                </a>
@@ -185,7 +185,8 @@ function App() {
               
                 >
                   {" "}
-                  <button type="button"id="aas1" onClick={()=>{uid ? window.location.href = `https://photography1-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}` : navigate('/signup')}}>
+                  <button type="button" id="aas1" onClick={() => { uid ? window.open(`https://photography1-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`, '_blank') : navigate('/signup') }}>
+
                     Edit
                   </button>
                 </a>
@@ -213,7 +214,7 @@ function App() {
                
                 >
                   {" "}
-                  <button type="button"id="aas1" onClick={()=>{uid ? window.location.href = `https://design-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}` : navigate('/signup')}}>
+                  <button type="button" id="aas1" onClick={() => { uid ? window.open(`https://design-portfolio-editable.onrender.com/?id=${encodeURIComponent(base64_encode(uid))}`, '_blank') : navigate('/signup') }}>
                     Edit
                   </button>
                 </a>
@@ -240,7 +241,8 @@ function App() {
            
                 >
                   {" "}
-                  <button type="button" id="aas1" onClick={()=>{uid ? window.location.href = `https://photography2-portfolio-editable.onrender.com/?id=${base64_encode(uid)}` : navigate('/signup')}}>
+                  <button type="button" id="aas1" onClick={() => { uid ? window.open(`https://photography2-portfolio-editable.onrender.com/?id=${base64_encode(uid)}`, '_blank') : navigate('/signup') }}>
+
                     Edit
                   </button>
                 </a>
